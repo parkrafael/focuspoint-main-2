@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Use jquery-->
+    <script src="overlayTest.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>focuspoint</title>
+</head>
+<body>
+    <div id="overlay">
+        <div class="times">
+            <h1>Focus Time!</h1>
+            <button>3 Minute Warm up</button>
+            <button>2 Minute Warm up</button>
+            <button>1 Minute Warm up</button>
+        </div>
+        <div class="start"> 
+            <button onclick="start()">Start Warm up</button>
+        </div>
+    </div>
+
+    <div id="button">
+        <button onclick="overlay()">Overlay</button>
+    </div>
+</body>
+</html>

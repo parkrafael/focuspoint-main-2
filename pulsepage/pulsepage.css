@@ -1,0 +1,158 @@
+/* ??? what does this do *. */
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #FEF7E8;
+}
+
+/* nav bar */
+
+.wrapper {
+    width: 100%;
+    height: 78px;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background-color: black; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* headers */
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+    /* background-color: aqua; */
+}
+
+nav ul li a {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #403D44;
+    text-decoration: none;
+}
+
+/* pulse circle */
+
+.pulse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    border-radius: 50%;
+}
+
+#centerCircle { 
+    position: fixed; 
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: #FF816A;
+}
+
+#circlePulse {
+    position: fixed;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: #FF816A;
+
+    animation: scaleIn 3s infinite cubic-bezier(.36,.11,.89,.32);
+    animation: scaleInIn 3s infinite alternate cubic-bezier(.36,.11,.89,.32);
+}
+
+@keyframes scaleInIn {
+    from {
+        transform: scale(2.5,2.5);
+        opacity: 0.1
+    }
+    to {
+        transform: scale(1, 1);
+        opacity: .5;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(1,1);
+        opacity: 0.5
+    }
+    to {
+        transform: scale(2.5, 2.5);
+        opacity: 0.1;
+    }
+}
+
+/* calm text & animation */
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    height: 77%;
+    width: 100%;
+}
+
+.calm {
+    display: flex;
+    justify-content: center;
+    font-size: 0.80em;
+  }
+
+.typewriter h1 {
+    justify-content: center;
+    color: #403D44;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #403D44;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0;
+    margin-right: auto;
+    /* Gives that scrolling effect as the typing happens */
+    animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    to {
+      width: 100%
+    }
+  }
+
+/* skip */
+
+.skip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+    height: 50%;
+    width: 100%;
+}
+
